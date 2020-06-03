@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Crown-lite</title>
+
+
+      <!-- stylesheet -->
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="slider/style/slider-def.css"> 
+
+      <!-- google fonts -->
+      <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+      <!-- bootstrap -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+      <!-- icons -->
+      <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+
+      <!-- for on scroll animations -->
+      <link rel="stylesheet" href="https://cdn.rawgit.com/daneden/animate.css/v3.1.0/animate.min.css">
+      <script src="https://cdn.rawgit.com/matthieua/WOW/1.0.1/dist/wow.min.js"></script>
+
+<body>
+      <div id="preloader" class="loaded">
+            <div id="status"></div>
+            
+            </div>
+      <a name="home"></a>
+      <div class="wrapper">
+
+            <!--------------- hero section starts here --------------->
+
+            <div class="video-container">
+                  <video playsinline autoplay muted loop id="bgvid" class="video">
+                        <source src="img/backgroundcover.mp4" type="video/mp4">
+                  </video>
+            </div>
+
+            <div class="header">
+                  <h1>Crown-lite</h1>
+                  <h6 class="text-center">Helping you during these unpredictable times</h6>
+            </div>
+
+            <!--------------- hero section ends here --------------->
+
+            <!--------------- navbar starts here --------------->
+
+            <nav class="nav">
+                 
+
+                  <ul id="menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Symptom Checker</a></li>
+                        <li><a href="#services">Nearby Testing Centers</a></li>
+                        <li><a href="#team">Corona statistics</a></li>
+                  </ul>
+
+                  <div id="toggle">
+                        <div class="span">menu</div>
+                  </div>
+
+            </nav>
+
+            <div id="resize">
+                  <div class="close-btn">close</div>
+
+                  <ul id="menu">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">Symptom Checker</a></li>
+                        <li><a href="#services">Nearby Testing Centers</a></li>
+                        <li><a href="#team">Corona statistics</a></li>
+
+                  </ul>
+            </div>
+
+            <!--------------- navbar ends here --------------->
+
+            <div class="content">
+
+            <!--------------- about section starts here --------------->
+
+            <a name="about"></a>
+
+                  
+           <section class="story">
+      
+
+                  <div class="container-fluid">
+
+                        <div class="section-data">
+
+                              <div class="row">
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-2 section-index wow fadeInUp" data-wow-delay="0.3s"></div>
+                                    <div class="col-md-8 section-heading wow fadeInUp" data-wow-delay="0.4s"></div>
+                              </div>
+
+                              <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-6 section-subheading wow fadeInUp" data-wow-delay="0.5s"><h1>Symptom Checker</h1></div>
+                              </div>
+                              
+                              <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-6 section-info wow fadeInUp" data-wow-delay="0.6s">Do you want to check how coronavirus is affecting you? Please take our symptoms checker to see how likely it is for you to have the coronavirus by inputting your symptoms. </div>
+                              </div>
+
+                              <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-8 more wow fadeInUp" data-wow-delay="0.7s">
+                                          <button onclick="location.href='symptom.html'" type="button">Check Your Symptoms</button>                                    </div>
+                              </div>
+
+                        </div>
+
+                  </div>
+
+           </section>
+
+            <!--------------- about section ends here --------------->
+
+            <!--------------- services section starts here --------------->
+
+
+
+           <section class="services">
+
+            <div class="container-fluid">
+
+                  <div class="section-data">
+
+                        <div class="row">
+                              <div class="col-md-2"></div>
+                              <div class="col-md-2 section-index wow fadeInUp" data-wow-delay="0.3s"></div>
+                              <div class="col-md-8 section-heading wow fadeInUp" data-wow-delay="0.4s">Common Symptoms</div>
+                        </div>
+
+                        <div class="row service">
+                              <div class="col-md-4"></div>
+                              <div class="col-md-3 wow fadeInUp" data-wow-delay="0.5s">
+                                          <img class="symptom-icon"src="img/cough.png">
+                                 
+                                    <div class="icon-title">
+                                          <span style="font-weight: bold;">Coughing</span> <br>
+                                    </div>
+                              </div>
+
+                              <div class="col-md-3 wow fadeInUp" data-wow-delay="0.6s">
+                                    <img class="symptom-icon"src="img/breath.png">
+                                          <div class="icon-title">
+                                                <span style="font-weight: bold;">Shortness of Breath</span> <br> 
+                                          </div>
+                              </div>
+                        </div>
+
+                        <div class="row service">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-3 wow fadeInUp" data-wow-delay="0.7s">
+                                          <img class="symptom-icon"src="img/fever.png">
+                                          <div class="icon-title">
+                                                <span style="font-weight: bold;">Fever</span> <br>
+                                          </div>
+                                    </div>
+      
+                                    <div class="col-md-3 wow fadeInUp" data-wow-delay="0.8s">
+                                          <img class="symptom-icon"src="img/headache.png">
+                                                <div class="icon-title">
+                                                      <span style="font-weight: bold;">Headaches</span> <br>
+                                                </div>
+                                    </div>
+                              </div>
+                  </div>
+
+            </div>
+
+           </section>
+       
+     </section>
+     
+     <a name="services"></a>
+
+            <!--------------- services section ends here --------------->
+            <section class="story">
+      
+
+                  <div class="container-fluid">
+
+                        <div class="section-data">
+
+                              <div class="row">
+                                    <div class="col-md-2"></div>
+                                    <div class="col-md-2 section-index wow fadeInUp" data-wow-delay="0.3s"></div>
+                                    <div class="col-md-8 section-heading wow fadeInUp" data-wow-delay="0.4s"></div>
+                              </div>
+
+                              <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-6 section-subheading wow fadeInUp" data-wow-delay="0.5s"><h1>Nearby Testing Centers</h1></div>
+                              </div>
+                              
+                              <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-6 section-info wow fadeInUp" data-wow-delay="0.6s">Please check for nearby testing facilities in your area to help defend you against the coronavirus!</div>
+                              </div>
+
+                              <div class="row">
+                                    <div class="col-md-4"></div>
+                                    <div class="col-md-8 more wow fadeInUp" data-wow-delay="0.7s">
+                                          <button onclick="location.href='testing-centers.html'" type="button">Find nearby testing centers</button>                                    </div>
+                              </div>
+
+                        </div>
+
+                  </div>
+
+           </section>
+           <a name="team"></a>
+
+           <section class="story grey-section">
+      
+
+            <div class="container-fluid">
+
+                  <div class="section-data">
+
+                        <div class="row">
+                              <div class="col-md-2"></div>
+                              <div class="col-md-2 section-index wow fadeInUp" data-wow-delay="0.3s"></div>
+                              <div class="col-md-8 section-heading wow fadeInUp" data-wow-delay="0.4s"></div>
+                        </div>
+
+                        <div class="row">
+                              <div class="col-md-4"></div>
+                              <div class="col-md-6 section-subheading wow fadeInUp" data-wow-delay="0.5s"><h1>See the coronavirus in a new prespective!</h1></div>
+                        </div>
+                        
+                        <div class="row">
+                              <div class="col-md-4"></div>
+                              <div class="col-md-6 section-info wow fadeInUp" data-wow-delay="0.6s">See the statistics on how the virus is development worldwide.</div>
+                        </div>
+
+                        <div class="row">
+                              <div class="col-md-4"></div>
+                              <div class="col-md-8 more wow fadeInUp" data-wow-delay="0.7s">
+                                    <button onclick="location.href='statistics.html'" type="button">statistics of the coronavirus</button>                                    </div>
+                        </div>
+
+                  </div>
+
+            </div>
+
+     </section>
+
+            
+
+
+            <!--------------- footer starts here --------------->
+
+            <div class="footer">
+
+                  <div class="container">
+
+                        <div class="info">
+                              
+                              <div class="row">
+                                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.3s" id="address">
+                                          <p>  <span>Copyright &copy;
+                                                <script>document.write(new Date().getFullYear());</script> </span></p>
+                                                <p> Team EN-DOS <br> Elizabeth Bruda, Natasha Setiadi, Donald Nelson, Owen Orsini, Sanjay Ravigopal, and Rijul Patel</p>
+                                          <br><br>
+                                    </div>
+
+                                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.4s" id="media">
+                                          <!-- <ul>
+                                                <li><ion-icon name="logo-facebook"></ion-icon></li>
+
+                                                <li><ion-icon name="logo-instagram"></ion-icon></li>
+
+                                                <li><ion-icon name="logo-twitter"></ion-icon></li>
+
+                                                <li><ion-icon name="logo-youtube"></ion-icon></li>
+                                          </ul> -->
+
+                                          <br><br>
+                                    </div>
+
+                                    <div class="col-md-4 wow fadeInUp" data-wow-delay="0.5s" id="mail">
+                                          <p><a target="_blank" >Video Background by Videezy.com</a></p>
+                                         
+                                    </div>
+                              
+                              </div>
+                             
+
+                              
+                              </div>
+
+                        </div>
+
+                  </div>
+
+            </div>
+
+            <!--------------- footer ends here --------------->
+
+            </div>
+
+      </div>
+
+
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+$(window).on('load', function(){
+
+$('#status').fadeOut();
+$('#preloader').delay(350).fadeOut('slow');
+$('#body').delay(350).css({'overflow': 'visible'});
+
+})
+// navigation starts here
+$("#toggle").click(function() {
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
+      });
+      $("#resize ul li a").click(function() {
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
+      });
+      $(".close-btn").click(function() {
+            $(this).toggleClass('on');
+            $("#resize").toggleClass("active");
+      });
+
+$(function () {
+  $(document).scroll(function () {
+    var $nav = $(".nav");
+    $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+  });
+});
+
+new WOW().init();
+
+// Select all links with hashes
+$('a[href*="#"]')
+  // Remove links that don't actually link to anything
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    // On-page links
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      // Figure out element to scroll to
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      // Does a scroll target exist?
+      if (target.length) {
+        // Only prevent default if animation is actually gonna happen
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          // Callback after animation
+          // Must change focus!
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) { // Checking if the target was focused
+            return false;
+          } else {
+            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+            $target.focus(); // Set focus again
+          };
+        });
+      }
+    }
+  });
+
+
+</script>
+</body>
+</html>
