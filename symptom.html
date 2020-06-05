@@ -12,6 +12,7 @@
       <link rel="stylesheet" href="style.css">
       <link rel="stylesheet" href="slider/style/slider-def.css">
 
+
       <!-- google fonts -->
       <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque:300,400,500,600,700,800,900&display=swap"
             rel="stylesheet">
@@ -109,7 +110,10 @@
                                                 The Content is not intended to be a substitute for professional medical
                                                 advice, diagnosis, or treatment. Always seek the advice of your
                                                 physician or other qualified health provider with any questions you may
-                                                have regarding a medical condition. </div>
+                                                have regarding a medical condition. 
+                                                <h2>Check which of the following symptoms apply to you:</h2>
+                                          </div>
+
                                     </div>
 
                                     <div class="row">
@@ -120,37 +124,18 @@
                                           <div class="col-md-8 section-heading wow fadeInUp" data-wow-delay="0.4s">
                                           </div>
                                     </div>
-
-                                    <div class="row">
-                                          <div class="col-md-4">
-                                          </div>
-                                          <div class="section-subheading wow fadeInUp" data-wow-delay="0.5s">
-
-
-
-
-
-                                                <div class="row">
-                                                      <div class="col-md-4">
-                                                      </div>
-                                                      <div class="col-md-8 more wow fadeInUp" data-wow-delay="0.7s">
-                                                            <!-- <button id="btn">Know more</button> -->
-                                                      </div>
-                                                </div>
-                                          </div>
-                                    </div>
                               </div>
                                                 <!--VUE JS #APP BEGINS HERE-->
                                                 <div id="app">
                                                       <!-- Checkboxes list -->
                                                       <!--@submit.prevent="onSubmit"-->
                                                       <form class="symptom-inputs">
-                                                            <div class="col-md-6 offset-4"v-for="(symptom, index) in symptomsData">
+                                                            <div class="col-md-6 offset-md-4"v-for="(symptom, index) in symptomsData">
                                                                   <input type='checkbox' v-bind:value='symptom'
                                                                         v-model="checkedSymptoms">{{ symptomsData[index].texts }}
                                                                   </input>
                                                             </div>
-                                                            <p class="col-md-6 offset-4"><strong>Note: if you have anything of the symptoms marked
+                                                            <p class="col-md-6 offset-md-4"><strong>Note: if you have anything of the symptoms marked
                                                                         with an asterisk (*) then you should seek
                                                                         emergency medical care immediately</strong></p>
 
@@ -158,18 +143,18 @@
                                                             <input type='button' @click='printValues()' value='Print Selected Values'></input>
                                                             Selected items : {{ totalSelected }} 
                                                             -->
-                                                            <div class="col-md-6 offset-4">
+                                                            <div class="col-md-6 offset-md-4">
                                                                   <label>Other Symptoms: </label>
                                                                   <textarea class="other-symptoms" id="otherSymptoms"
                                                                         v-model="otherSymptoms">
                                                                   </textarea>
                                                             </div>
                                                             <br>
-                                                            <div class="col-md-6 offset-4">
+                                                            <div class="col-md-6 offset-md-4">
                                                                   <label for="LocationCategory">Use the map to select
                                                                         the category which you have spent the most time
                                                                         in.:</label>
-                                                                  <img src="img/categoryLegend.png">
+                                                                  <img class="symptom-key"src="img/categoryLegend.png">
 
                                                                   <select name="LocationCategory"
                                                                         v-model="selectedCategory">
@@ -184,17 +169,16 @@
                                                                   
                                                             </div>
                                                       </form>
-                                                            <div class="symptom-results col-md-6 offset-4">
+                                                            <div class="symptom-results col-md-6 offset-md-4">
                                                                   <button v-on:click="calculateSymptoms">Submit</button>
                                                                   <p>{{result}}</p>
-                                                                  <br>
-                                                                  <p v-if="hasAnyVirus">Percent Certainty: {{percentage}}</p>
+                                                                  <p v-if="hasAnyVirus"><strong>Percent Certainty: {{percentage}}</strong></p>
                                                                 </div>
                                                             <div class="col-md-12">
                                                                   <iframe class="col-md-12"style="width: 100%; height: 1000px; overflow: hidden;"
                                                                   src="https://www.arcgis.com/apps/opsdashboard/index.html#/409af567637846e3b5d4182fcd779bea"
                                                                   width="10" height="1000">Iframes not supported</iframe>
-                                                            <p>Credit: Johns Hopkins University</p>
+                                                            <p>Map Credit: Johns Hopkins University</p>
                                                             </div>
                                                            
                                                             
