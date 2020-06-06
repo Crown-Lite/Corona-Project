@@ -62,6 +62,7 @@
                         <li><a href="symptom.html">Symptom Checker</a></li>
                         <li><a href="testing-centers.html">Nearby Testing Centers</a></li>
                         <li><a href="statistics.html">Corona statistics</a></li>
+                        <li><a href="news.html">Prevention</a></li>
                   </ul>
 
                   <div id="toggle">
@@ -78,6 +79,8 @@
                         <li><a href="symptom.html">Symptom Checker</a></li>
                         <li><a href="testing-centers.html">Nearby Testing Centers</a></li>
                         <li><a href="statistics.html">Corona statistics</a></li>
+                        <li><a href="news.html">Prevention</a></li>
+
 
                   </ul>
             </div>
@@ -110,8 +113,9 @@
                                                 The Content is not intended to be a substitute for professional medical
                                                 advice, diagnosis, or treatment. Always seek the advice of your
                                                 physician or other qualified health provider with any questions you may
-                                                have regarding a medical condition. 
-                                                <h2>Check which of the following symptoms apply to you:</h2>
+                                                have regarding a medical condition. Sources for the medical knowledge: WHO and the CDC
+                                                <h2>Check which of the following symptoms apply to you:<br> </h2>
+                                                <br>
                                           </div>
 
                                     </div>
@@ -130,9 +134,9 @@
                                                       <!-- Checkboxes list -->
                                                       <!--@submit.prevent="onSubmit"-->
                                                       <form class="symptom-inputs">
-                                                            <div class="col-md-6 offset-md-4"v-for="(symptom, index) in symptomsData">
-                                                                  <input type='checkbox' v-bind:value='symptom'
-                                                                        v-model="checkedSymptoms">{{ symptomsData[index].texts }}
+                                                            <div class="symptom-checkbox col-md-6 offset-md-4"v-for="(symptom, index) in symptomsData">
+                                                                  <input class="symptom-checkbox" type='checkbox' v-bind:value='symptom'
+                                                                        v-model="checkedSymptoms">  {{ symptomsData[index].texts }}
                                                                   </input>
                                                             </div>
                                                             <p class="col-md-6 offset-md-4"><strong>Note: if you have anything of the symptoms marked
@@ -169,21 +173,22 @@
                                                                   
                                                             </div>
                                                       </form>
+                             
+                                                          
+                                                           
                                                             <div class="symptom-results col-md-6 offset-md-4">
                                                                   <button v-on:click="calculateSymptoms">Submit</button>
                                                                   <p>{{result}}</p>
                                                                   <p v-if="hasAnyVirus"><strong>Percent Certainty: {{percentage}}</strong></p>
                                                                 </div>
-                                                            <div class="col-md-12">
-                                                                  <iframe class="col-md-12"style="width: 100%; height: 1000px; overflow: hidden;"
+                                                                <center>
+                                                       <div >
+                                                                  <iframe class="col-md-12"style="width: 60%; height: 1000px; overflow: hidden;"
                                                                   src="https://www.arcgis.com/apps/opsdashboard/index.html#/409af567637846e3b5d4182fcd779bea"
                                                                   width="10" height="1000">Iframes not supported</iframe>
                                                             <p>Map Credit: Johns Hopkins University</p>
                                                             </div>
-                                                           
-                                                            
-                                                     
-                                                   
+                                                      </center>
 
                                                     
                                                       <div class="row">
@@ -218,8 +223,7 @@
                                                 <p> <span>Copyright &copy;
                                                             <script>document.write(new Date().getFullYear());</script>
                                                       </span></p>
-                                                <p> Team EN-DOS <br> Elizabeth Bruda, Natasha Setiadi, Donald Nelson,
-                                                      Owen Orsini, Sanjay Ravigopal, and Rijul Patel</p>
+                                                      <p> Team EN-DOS <br> Elizabeth Bruda, Natasha Setiadi, Donald Nelson, Owen Orsini, and Sanjay Ravigopal</p>
                                                 <br><br>
                                           </div>
 
