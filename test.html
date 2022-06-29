@@ -1,5 +1,70 @@
-var app = new Vue({
-	el: '#app',
+<html>
+<head>
+<title></title>
+</head>
+<body>
+<div id="app">
+        <!-- Checkboxes list -->
+        <!--@submit.prevent="onSubmit"-->
+        <form class="symptom-inputs">
+              <div class="symptom-checkbox col-md-6 offset-md-4"v-for="(symptom, index) in symptomsData">
+                    <input class="symptom-checkbox" type='checkbox' v-bind:value='symptom'
+                          v-model="checkedSymptoms">  {{ symptomsData[index].texts }}
+                    </input>
+              </div>
+              <p class="col-md-6 offset-md-4"><strong>Note: if you have anything of the symptoms marked
+                          with an asterisk (*) then you should seek
+                          emergency medical care immediately</strong></p>
+
+              <!---Keep for Printing Values  - Debug 
+              <input type='button' @click='printValues()' value='Print Selected Values'></input>
+              Selected items : {{ totalSelected }} 
+              -->
+              <div class="col-md-6 offset-md-4">
+                    <label>Other Symptoms: </label>
+                    <textarea class="other-symptoms" id="otherSymptoms"
+                          v-model="otherSymptoms">
+                    </textarea>
+              </div>
+              <br>
+              <div class="col-md-6 offset-md-4">
+                    <label for="LocationCategory">Use the map to select
+                          the category which you have spent the most time
+                          in.:</label>
+                    <img class="symptom-key"src="img/categoryLegend.png">
+
+                    <select name="LocationCategory"
+                          v-model="selectedCategory">
+                          <option value="7">7</option>
+                          <option value="6">6</option>
+                          <option value="5">5</option>
+                          <option value="4">4</option>
+                          <option value="3">3</option>
+                          <option value="2">2</option>
+                          <option value="1">1</option>
+                    </select>
+                    
+              </div>
+        </form>
+</input>
+<ul>
+    <li v-for="(value, key, index) in myObject">
+		  {{ index }}. {{ key }}: {{ value }}
+		</li>
+  </ul>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+
+<script>
+
+var myModel = {
+  name: "Ashley",
+  age: 24
+};
+
+var myViewModel = new Vue({
+    el: '#app',
 	data: {
         symptomsData: [
 			{
@@ -480,18 +545,9 @@ var app = new Vue({
           } 
           
     }
-    
-})
-//I added this here as for some reason the mobile view only works if I put this code in your file rather than in a script tag
-// $("#toggle").click(function() {
-//     $(this).toggleClass('on');
-//     $("#resize").toggleClass("active");
-// });
-// $("#resize ul li a").click(function() {
-//     $(this).toggleClass('on');
-//     $("#resize").toggleClass("active");
-// });
-// $(".close-btn").click(function() {
-//     $(this).toggleClass('on');
-//     $("#resize").toggleClass("active");
-// });
+});
+
+</script>
+
+</body>
+</html>
